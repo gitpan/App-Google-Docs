@@ -1,0 +1,230 @@
+#!/usr/bin/perl
+
+use App::Google::Docs;
+use Getopt::Long;
+
+use warnings;
+use strict;
+
+=head1 NAME
+
+gdocs - bring Google Documents to the command line
+
+=head1 VERSION
+
+=head1 SYNOPSIS
+
+ gdocs [OPTIONS] COMMAND [ARGS]
+
+ Commands:
+   upload 	FILES
+   list		[STRING]
+   download	FILE
+   trash	FILE
+
+ Options:
+   --email, -e  EMAIL
+   --pwd, -p    PASSWORD
+   --format, -f FORMAT
+   --dest, -d   FILE
+
+=cut
+
+my $email 	= $ENV{GOOGLE_EMAIL} || $ENV{EMAIL};
+my $password 	= $ENV{GOOGLE_PASSWORD};
+my $format	= 'txt';
+my $dest;
+
+my $result = GetOptions(
+	"email=s"  => \$email,
+	"format=s" => \$format,
+	"dest=s"   => \$dest
+);
+
+die "Err: set email address.\n" unless $email;
+
+if (!$password) {
+	print STDERR "Enter password for '$email': ";
+	system('stty','-echo') if $^O eq 'linux';
+	chop($password = <STDIN>);
+	system('stty','echo') if $^O eq 'linux';
+	print "\n";
+}
+
+my $app = App::Google::Docs -> new(email => $email, password => $password);
+
+my $command = shift;
+
+if ($command eq "upload") {
+	foreach my $file (@ARGV) {
+		print "Uploading '$file'... ";
+		my $document = $app -> upload($file);
+
+		if ($document != -1) {
+			print "Done. Direct link: ".$document -> {'link'}."\n";
+		}
+	}
+} elsif ($command eq 'list') {
+	my $entries = $app -> list(@ARGV);
+
+	foreach my $entry (@{$entries}) {
+		print $entry -> {'title'}."\n";
+	}
+} elsif ($command eq 'download') {
+	my $entries = $app -> list(@ARGV);
+
+	if (scalar @{$entries} > 1) {
+		print "More than one matching entry: ";
+
+		foreach my $entry (@{$entries}) {
+			print $entry -> {'title'}." ";
+		}
+
+		print "\n";
+		exit;
+	}
+
+	if ($dest && -d $dest) {
+		$dest .= @{$entries}[0] -> {'title'}.".$format";
+	}
+
+	my $out_file = $dest || @{$entries}[0] -> {'title'}.".$format";
+	print "Downloading '$out_file'... ";
+
+	my $data = $app -> download(@{$entries}[0] -> {'resource_id'}, $format);
+
+	if (!open(FILE, ">", $out_file)) {
+		die "Err: Unable to open '$out_file': $!.\n";
+	}
+
+	print FILE $data;
+	close FILE;
+
+	print "Done\n";
+} elsif ($command eq 'trash') {
+	my $entries = $app -> list(@ARGV);
+
+	foreach my $entry (@{$entries}) {
+		print "Moving to trash '".$entry -> {'title'}."'... ";
+		if ($app -> trash($entry -> {'resource_id'}) != -1) {
+			print "Done\n";
+		}
+	}
+}
+
+=head1 COMMANDS
+
+=over 4
+
+=item B<upload> FILES
+
+upload file to Google Docs
+
+=item B<list> [STRING]
+
+list docs filtering by STRING (can be empty)
+
+=item B<download> FILE
+
+download a document
+
+=item B<trash> FILE
+
+move a document to the trash
+
+=back
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<--email>, B<-e> EMAIL
+
+set login email
+
+=item B<--pwd>, B<-p> PASSWORD
+
+set login password
+
+=item B<--format>, B<-f> FORMAT
+
+set download format (to be used with command 'download')
+
+=item B<--dest>, B<-d> FILE
+
+set download destination (to be used with command 'download')
+
+=back
+
+=head1 CONFIGURATION
+
+The following environment variables will affect gdocs behaviour:
+
+=over
+
+=item B<GOOGLE_EMAIL>
+
+Specifies the login email. If blank uses EMAIL.
+
+=item B<DONE_PWD>
+
+Specifies the login password.
+
+=back
+
+=head1 AUTHOR
+
+Alessandro Ghedini, C<< <alexbio at cpan.org> >>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to C<bug-app-google-docs at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-Google-Docs>.  I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc gdocs
+
+You can also look for information at:
+
+=over 4
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-Google-Docs>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/App-Google-Docs>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/App-Google-Docs>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/App-Google-Docs/>
+
+=back
+
+
+=head1 ACKNOWLEDGEMENTS
+
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright 2011 Alessandro Ghedini.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+
+
+=cut
+
+1; # End of gdocs
