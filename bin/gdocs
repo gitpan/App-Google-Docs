@@ -8,7 +8,7 @@ use strict;
 
 =head1 NAME
 
-gdocs - bring Google Documents to the command line
+gdocs - Bring Google Documents to the command line
 
 =head1 VERSION
 
@@ -94,12 +94,13 @@ if ($command eq "upload") {
 
 	my $data = $app -> download(@{$entries}[0] -> {'resource_id'}, $format);
 
-	if (!open(FILE, ">", $out_file)) {
+	my $file;
+	if (!open($file, ">", $out_file)) {
 		die "Err: Unable to open '$out_file': $!.\n";
 	}
 
-	print FILE $data;
-	close FILE;
+	print $file $data;
+	close $file;
 
 	print "Done\n";
 } elsif ($command eq 'trash') {
@@ -235,10 +236,6 @@ L<http://cpanratings.perl.org/d/App-Google-Docs>
 L<http://search.cpan.org/dist/App-Google-Docs/>
 
 =back
-
-
-=head1 ACKNOWLEDGEMENTS
-
 
 =head1 LICENSE AND COPYRIGHT
 

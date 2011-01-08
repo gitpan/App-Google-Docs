@@ -1,6 +1,6 @@
 package App::Google::Docs;
 BEGIN {
-  $App::Google::Docs::VERSION = '0.02';
+  $App::Google::Docs::VERSION = '0.03';
 }
 
 use JSON;
@@ -14,11 +14,11 @@ use strict;
 
 =head1 NAME
 
-App::Google::Docs - bring Google Documents to the command line
+App::Google::Docs - Bring Google Documents to the command line
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -306,9 +306,6 @@ L<http://cpanratings.perl.org/d/App-Google-Docs>
 L<http://search.cpan.org/dist/App-Google-Docs/>
 
 =back
-
-=head1 SEE ALSO
-
 
 =head1 LICENSE AND COPYRIGHT
 

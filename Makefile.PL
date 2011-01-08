@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'bring Google Documents to the command line',
+  'ABSTRACT' => 'Bring Google Documents to the command line',
   'AUTHOR' => 'Alessandro Ghedini <alexbio@cpan.org>',
   'BUILD_REQUIRES' => {
     'Test::More' => '0'
@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     'Media::Type::Simple' => '0',
     'WWW::Google::Auth::ClientLogin' => '0'
   },
-  'VERSION' => '0.02',
+  'VERSION' => '0.03',
   'test' => {
     'TESTS' => 't/*.t'
   }

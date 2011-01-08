@@ -2,6 +2,46 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit a199b8e5851184a04867d6e64b6999481372f15f
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 15:54:20 2011 +0100
+  
+    bump version
+
+  commit e80b745ffb22287d6a31e93d26a39b85f7a8893a
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 15:53:45 2011 +0100
+  
+    remove ACKNOWLEDGEMENTS section
+
+  commit 443afb415fe5c746963c37eec7aed65dde056164
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 15:52:41 2011 +0100
+  
+    remove SEE ALSO section
+
+  commit da42a17f6294ed29fb0c227dca9aac7e71421ae3
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 15:51:26 2011 +0100
+  
+    short description start with capital letter
+
+  commit d3000bc2122e5496bd6f276de5e20bb6d1eedc11
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 15:50:50 2011 +0100
+  
+    use lexical filehandle in gdocs
+
+  commit a13860d2867ba9e1719a30956d5022475338fa1a
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 15:48:31 2011 +0100
+  
+    make gdocs executable 
+
+===============================
+2011-01-08 11:53:37 +0100 v0.02
+===============================
+
   commit 53ee04defe3c6b2915bcd11ace420e8d293e5da6
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sat Jan 8 11:53:37 2011 +0100

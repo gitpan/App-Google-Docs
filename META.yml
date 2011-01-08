@@ -1,5 +1,5 @@
 ---
-abstract: 'bring Google Documents to the command line'
+abstract: 'Bring Google Documents to the command line'
 author:
   - 'Alessandro Ghedini <alexbio@cpan.org>'
 build_requires:
@@ -23,7 +23,7 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/App-Google-Docs/
   repository: git://github.com/AlexBio/App-Google-Docs.git
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   plugins:
     -

@@ -1,5 +1,5 @@
 {
-   "abstract" : "bring Google Documents to the command line",
+   "abstract" : "Bring Google Documents to the command line",
    "author" : [
       "Alessandro Ghedini <alexbio@cpan.org>"
    ],
@@ -44,7 +44,7 @@
          "web" : "https://github.com/AlexBio/App-Google-Docs"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
