@@ -44,7 +44,7 @@
          "web" : "https://github.com/AlexBio/App-Google-Docs"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

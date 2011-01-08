@@ -1,3 +1,31 @@
+==============================
+9999-99-99 99:99:99 +0000 HEAD
+==============================
+
+  commit 53ee04defe3c6b2915bcd11ace420e8d293e5da6
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 11:53:37 2011 +0100
+  
+    bump version
+
+  commit 03175d4bb701d153007004191ad84ddf9ac40e29
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Jan 8 11:36:57 2011 +0100
+  
+    add 'help' command
+
+  commit cf66bbb2bd212cd07cd5bcdbfbcdba9c1e3c164e
+  Author: Alexandr Ciornii <alexchorny@gmail.com>
+  Date:   Fri Jan 7 22:31:42 2011 +0200
+  
+    correct name for environment variable
+
+  commit e21b1c1c4fc21478f18d57367c3bfba94ae7f456
+  Author: Alexandr Ciornii <alexchorny@gmail.com>
+  Date:   Fri Jan 7 22:30:05 2011 +0200
+  
+    use lexical filehandle 
+
 ===================================
 End of changes in the last 365 days
 ===================================

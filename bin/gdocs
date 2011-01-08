@@ -21,6 +21,7 @@ gdocs - bring Google Documents to the command line
    list		[STRING]
    download	FILE
    trash	FILE
+   help
 
  Options:
    --email, -e  EMAIL
@@ -110,6 +111,27 @@ if ($command eq "upload") {
 			print "Done\n";
 		}
 	}
+} elsif ($command eq 'help') {
+	my $usage = <<END;
+gdocs [OPTIONS] COMMAND [ARGS]
+
+ Commands:
+   upload 	FILES
+   list		[STRING]
+   download	FILE
+   trash	FILE
+   help
+
+ Options:
+   --email, -e  EMAIL
+   --pwd, -p    PASSWORD
+   --format, -f FORMAT
+   --dest, -d   FILE
+
+See 'perldoc gdocs' for more information.
+END
+
+	print $usage;
 }
 
 =head1 COMMANDS
@@ -131,6 +153,10 @@ download a document
 =item B<trash> FILE
 
 move a document to the trash
+
+=item B<help>
+
+show an help message
 
 =back
 
@@ -166,7 +192,7 @@ The following environment variables will affect gdocs behaviour:
 
 Specifies the login email. If blank uses EMAIL.
 
-=item B<DONE_PWD>
+=item B<GOOGLE_PASSWORD>
 
 Specifies the login password.
 

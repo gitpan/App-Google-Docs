@@ -1,6 +1,6 @@
 package App::Google::Docs;
 BEGIN {
-  $App::Google::Docs::VERSION = '0.01';
+  $App::Google::Docs::VERSION = '0.02';
 }
 
 use JSON;
@@ -18,7 +18,7 @@ App::Google::Docs - bring Google Documents to the command line
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -249,13 +249,14 @@ Read a file and return basename, content and mime.
 sub _readfile {
 	my $filename = shift;
 
-	if (!open(FILE, $filename)) {
+	my $file;
+	if (!open($file, $filename)) {
 		print "Err: Unable to read '$filename'.\n";
 		return -1;
 	}
 
-	my $data = join("", <FILE>);
-	close FILE;
+	my $data = join("", <$file>);
+	close $file;
 
 	my $file_info = {name => basename($filename),
 			 data => $data,
