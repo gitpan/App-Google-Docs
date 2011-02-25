@@ -42,7 +42,7 @@ my $result = GetOptions(
 	"dest=s"   => \$dest
 );
 
-die "Err: set email address.\n" unless $email;
+die "Err: set email address. See 'perldoc $0'\n" unless $email;
 
 if (!$password) {
 	print STDERR "Enter password for '$email': ";
@@ -55,6 +55,8 @@ if (!$password) {
 my $app = App::Google::Docs -> new(email => $email, password => $password);
 
 my $command = shift;
+
+die "Err: no command given. See 'perldoc $0'\n" unless $command;
 
 if ($command eq "upload") {
 	foreach my $file (@ARGV) {

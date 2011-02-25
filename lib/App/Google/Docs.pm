@@ -1,6 +1,6 @@
 package App::Google::Docs;
 BEGIN {
-  $App::Google::Docs::VERSION = '0.03';
+  $App::Google::Docs::VERSION = '0.04';
 }
 
 use JSON;
@@ -18,7 +18,7 @@ App::Google::Docs - Bring Google Documents to the command line
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -63,7 +63,8 @@ sub new {
 		email		=> $params{'email'},
 		password	=> $params{'password'},
 		service		=> 'writely',
-		sources		=> __PACKAGE__ . '0.01'#$__PACKAGE__::VERSION
+		sources		=> __PACKAGE__ . $__PACKAGE__::VERSION,
+		type		=> 'HOSTED_OR_GOOGLE'
 	);
 
 	my $result = $auth -> authenticate;
@@ -81,7 +82,7 @@ sub new {
 
 =head2 list( $file_path )
 
-List docuemnts.
+List documents.
 
 =cut
 

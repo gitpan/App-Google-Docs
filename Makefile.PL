@@ -31,7 +31,7 @@ my %WriteMakefileArgs = (
     'Media::Type::Simple' => '0',
     'WWW::Google::Auth::ClientLogin' => '0'
   },
-  'VERSION' => '0.03',
+  'VERSION' => '0.04',
   'test' => {
     'TESTS' => 't/*.t'
   }

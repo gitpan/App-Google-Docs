@@ -2,6 +2,46 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 5b4b3049312b14e373de22048af17c76277eed4f
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 17:18:09 2011 +0100
+  
+    bump version
+
+  commit a6acb97414dcf92c5335a7e555748c81acd88306
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 17:32:56 2011 +0100
+  
+    use package's current version
+
+  commit 7e853efd88c48269aa3f8db4de96e7d204e38f0b
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 17:17:53 2011 +0100
+  
+    add GithubUpdate to dist.ini
+
+  commit 7fd90475b5f121cdd5b632c8dc6a6af8d03b489e
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 17:15:44 2011 +0100
+  
+    explicitly set Google account type
+
+  commit 123789f0e0edd07bf2a92e978d8ffbb352b4874f
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 17:10:25 2011 +0100
+  
+    fix typo in documentation
+
+  commit b103e905182b72c8663e3129e56ec842c40d9194
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 16:40:24 2011 +0100
+  
+    check for empty command 
+
+===============================
+2011-01-08 15:54:20 +0100 v0.03
+===============================
+
   commit a199b8e5851184a04867d6e64b6999481372f15f
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sat Jan 8 15:54:20 2011 +0100
