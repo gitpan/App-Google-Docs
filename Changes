@@ -2,6 +2,40 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit f0eaf33036ad887565110c2ab29be9ed8a44262b
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 16:23:32 2011 +0100
+  
+    bump version
+
+  commit 96fba9d51dc1179d6f713ee49310f6997ed4bd8d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 16:35:18 2011 +0100
+  
+    use LWP::MediaTypes
+
+  commit 99139703200fa195bedb782ca6074068eb6a21f7
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 16:20:27 2011 +0100
+  
+    purge cruft from docs
+
+  commit 62f89565f44fdfce4d2b6b40c869b08fd59983d9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 16:19:36 2011 +0100
+  
+    use @GitHub plugin bundle
+
+  commit 870f94dcae86cc85c7c863dab8dfe9b02141956c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Fri Feb 25 19:41:42 2011 +0100
+  
+    fix package version in user-agent 
+
+===============================
+2011-02-25 17:33:50 +0100 v0.04
+===============================
+
   commit 5b4b3049312b14e373de22048af17c76277eed4f
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Fri Feb 25 17:18:09 2011 +0100

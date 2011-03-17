@@ -4,7 +4,7 @@
       "Alessandro Ghedini <alexbio@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200003, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200003, CPAN::Meta::Converter version 2.110580",
    "license" : [
       "perl_5"
    ],
@@ -24,8 +24,8 @@
             "File::Basename" : 0,
             "Getopt::Long" : 0,
             "JSON" : 0,
+            "LWP::MediaTypes" : 0,
             "LWP::UserAgent" : 0,
-            "Media::Type::Simple" : 0,
             "WWW::Google::Auth::ClientLogin" : 0
          }
       },
@@ -37,6 +37,9 @@
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/AlexBio/App-Google-Docs/issues"
+      },
       "homepage" : "http://search.cpan.org/dist/App-Google-Docs/",
       "repository" : {
          "type" : "git",
@@ -44,7 +47,7 @@
          "web" : "https://github.com/AlexBio/App-Google-Docs"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -118,9 +121,14 @@
             "version" : "4.200003"
          },
          {
-            "class" : "Dist::Zilla::Plugin::MetaResources",
-            "name" : "MetaResources",
-            "version" : "4.200003"
+            "class" : "Dist::Zilla::Plugin::GitHub::Meta",
+            "name" : "@GitHub/GitHub::Meta",
+            "version" : "0.06"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::GitHub::Update",
+            "name" : "@GitHub/GitHub::Update",
+            "version" : "0.06"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
@@ -155,17 +163,12 @@
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
             "name" : "Git::Tag",
-            "version" : "1.110330"
+            "version" : "1.110500"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",
             "name" : "Git::Push",
-            "version" : "1.110330"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::GithubUpdate",
-            "name" : "GithubUpdate",
-            "version" : "0.03"
+            "version" : "1.110500"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

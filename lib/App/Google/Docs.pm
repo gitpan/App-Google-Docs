@@ -1,12 +1,12 @@
 package App::Google::Docs;
 BEGIN {
-  $App::Google::Docs::VERSION = '0.04';
+  $App::Google::Docs::VERSION = '0.05';
 }
 
 use JSON;
 use File::Basename;
 use LWP::UserAgent;
-use Media::Type::Simple;
+use LWP::MediaTypes;
 use WWW::Google::Auth::ClientLogin;
 
 use warnings;
@@ -18,7 +18,7 @@ App::Google::Docs - Bring Google Documents to the command line
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -63,7 +63,7 @@ sub new {
 		email		=> $params{'email'},
 		password	=> $params{'password'},
 		service		=> 'writely',
-		sources		=> __PACKAGE__ . $__PACKAGE__::VERSION,
+		sources		=> __PACKAGE__.$App::Google::Docs::VERSION,
 		type		=> 'HOSTED_OR_GOOGLE'
 	);
 
@@ -259,9 +259,11 @@ sub _readfile {
 	my $data = join("", <$file>);
 	close $file;
 
-	my $file_info = {name => basename($filename),
-			 data => $data,
-			 mime => type_from_ext(($filename =~ m/([^.]+)$/)[0])};
+	my $file_info = {
+		name => basename($filename),
+		data => $data,
+		mime => guess_media_type($filename)
+	};
 
 	return $file_info;
 }
@@ -269,44 +271,6 @@ sub _readfile {
 =head1 AUTHOR
 
 Alessandro Ghedini <alexbio@cpan.org>
-
-=head1 BUGS
-
-Please report any bugs or feature requests at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-Google-Docs>.
-I will be notified, and then you'll automatically be notified of progress
-on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc App::Google::Docs
-
-You can also look for information at:
-
-=over 4
-
-=item * GitHub page
-
-L<http://github.com/AlexBio/App-Google-Docs>
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-Google-Docs>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/App-Google-Docs>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/App-Google-Docs>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/App-Google-Docs/>
-
-=back
 
 =head1 LICENSE AND COPYRIGHT
 

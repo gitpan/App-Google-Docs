@@ -27,11 +27,11 @@ my %WriteMakefileArgs = (
     'File::Basename' => '0',
     'Getopt::Long' => '0',
     'JSON' => '0',
+    'LWP::MediaTypes' => '0',
     'LWP::UserAgent' => '0',
-    'Media::Type::Simple' => '0',
     'WWW::Google::Auth::ClientLogin' => '0'
   },
-  'VERSION' => '0.04',
+  'VERSION' => '0.05',
   'test' => {
     'TESTS' => 't/*.t'
   }

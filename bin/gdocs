@@ -205,40 +205,6 @@ Specifies the login password.
 
 Alessandro Ghedini, C<< <alexbio at cpan.org> >>
 
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-app-google-docs at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=App-Google-Docs>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc gdocs
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-Google-Docs>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/App-Google-Docs>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/App-Google-Docs>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/App-Google-Docs/>
-
-=back
-
 =head1 LICENSE AND COPYRIGHT
 
 Copyright 2011 Alessandro Ghedini.
