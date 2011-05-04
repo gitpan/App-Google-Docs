@@ -4,7 +4,7 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -15,7 +15,7 @@ my %WriteMakefileArgs = (
     'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'App-Google-Docs',
   'EXE_FILES' => [
@@ -24,14 +24,15 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'App::Google::Docs',
   'PREREQ_PM' => {
+    'App::Cmd::Setup' => '0',
+    'Cwd' => '0',
     'File::Basename' => '0',
-    'Getopt::Long' => '0',
     'JSON' => '0',
     'LWP::MediaTypes' => '0',
     'LWP::UserAgent' => '0',
     'WWW::Google::Auth::ClientLogin' => '0'
   },
-  'VERSION' => '0.05',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }

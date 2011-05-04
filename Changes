@@ -2,6 +2,46 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 4d5d732557f3e64aa08b09a23533f32ed31697f9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Wed May 4 16:58:54 2011 +0200
+  
+    bump version
+
+  commit 4005c6d5f99a6ac20f3c6d2c41081b81b876632b
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Wed May 4 17:06:40 2011 +0200
+  
+    autoflush STDOUT, to keep output formatted on error
+
+  commit 4cfad34ca62fc4e54dc2a52dcabfc81d3da4a329
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Wed May 4 16:47:11 2011 +0200
+  
+    clean-up code
+
+  commit 5023ac6aca28f3cc2f8235eb432e6f4fac97dbb4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Wed May 4 16:05:45 2011 +0200
+  
+    use App::Cmd
+
+  commit cce2d1d0fa36214bf271d701eba81cd071f564a9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Apr 25 18:51:40 2011 +0200
+  
+    use Author::ALEXBIO dzil bundle
+
+  commit d66593bc14d313e5ad8d8fe196b56367ba244cad
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 19:41:45 2011 +0100
+  
+    fix email address 
+
+===============================
+2011-03-17 16:35:34 +0100 v0.05
+===============================
+
   commit f0eaf33036ad887565110c2ab29be9ed8a44262b
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Thu Mar 17 16:23:32 2011 +0100

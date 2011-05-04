@@ -1,7 +1,6 @@
 #!/usr/bin/perl
 
 use App::Google::Docs;
-use Getopt::Long;
 
 use warnings;
 use strict;
@@ -12,178 +11,19 @@ gdocs - Bring Google Documents to the command line
 
 =head1 VERSION
 
+version 0.06
+
 =head1 SYNOPSIS
 
  gdocs [OPTIONS] COMMAND [ARGS]
 
- Commands:
-   upload 	FILES
-   list		[STRING]
-   download	FILE
-   trash	FILE
-   help
-
- Options:
-   --email, -e  EMAIL
-   --pwd, -p    PASSWORD
-   --format, -f FORMAT
-   --dest, -d   FILE
+ # for help
+ gdocs commands
+ gdocs help COMMAND
 
 =cut
 
-my $email 	= $ENV{GOOGLE_EMAIL} || $ENV{EMAIL};
-my $password 	= $ENV{GOOGLE_PASSWORD};
-my $format	= 'txt';
-my $dest;
-
-my $result = GetOptions(
-	"email=s"  => \$email,
-	"format=s" => \$format,
-	"dest=s"   => \$dest
-);
-
-die "Err: set email address. See 'perldoc $0'\n" unless $email;
-
-if (!$password) {
-	print STDERR "Enter password for '$email': ";
-	system('stty','-echo') if $^O eq 'linux';
-	chop($password = <STDIN>);
-	system('stty','echo') if $^O eq 'linux';
-	print "\n";
-}
-
-my $app = App::Google::Docs -> new(email => $email, password => $password);
-
-my $command = shift;
-
-die "Err: no command given. See 'perldoc $0'\n" unless $command;
-
-if ($command eq "upload") {
-	foreach my $file (@ARGV) {
-		print "Uploading '$file'... ";
-		my $document = $app -> upload($file);
-
-		if ($document != -1) {
-			print "Done. Direct link: ".$document -> {'link'}."\n";
-		}
-	}
-} elsif ($command eq 'list') {
-	my $entries = $app -> list(@ARGV);
-
-	foreach my $entry (@{$entries}) {
-		print $entry -> {'title'}."\n";
-	}
-} elsif ($command eq 'download') {
-	my $entries = $app -> list(@ARGV);
-
-	if (scalar @{$entries} > 1) {
-		print "More than one matching entry: ";
-
-		foreach my $entry (@{$entries}) {
-			print $entry -> {'title'}." ";
-		}
-
-		print "\n";
-		exit;
-	}
-
-	if ($dest && -d $dest) {
-		$dest .= @{$entries}[0] -> {'title'}.".$format";
-	}
-
-	my $out_file = $dest || @{$entries}[0] -> {'title'}.".$format";
-	print "Downloading '$out_file'... ";
-
-	my $data = $app -> download(@{$entries}[0] -> {'resource_id'}, $format);
-
-	my $file;
-	if (!open($file, ">", $out_file)) {
-		die "Err: Unable to open '$out_file': $!.\n";
-	}
-
-	print $file $data;
-	close $file;
-
-	print "Done\n";
-} elsif ($command eq 'trash') {
-	my $entries = $app -> list(@ARGV);
-
-	foreach my $entry (@{$entries}) {
-		print "Moving to trash '".$entry -> {'title'}."'... ";
-		if ($app -> trash($entry -> {'resource_id'}) != -1) {
-			print "Done\n";
-		}
-	}
-} elsif ($command eq 'help') {
-	my $usage = <<END;
-gdocs [OPTIONS] COMMAND [ARGS]
-
- Commands:
-   upload 	FILES
-   list		[STRING]
-   download	FILE
-   trash	FILE
-   help
-
- Options:
-   --email, -e  EMAIL
-   --pwd, -p    PASSWORD
-   --format, -f FORMAT
-   --dest, -d   FILE
-
-See 'perldoc gdocs' for more information.
-END
-
-	print $usage;
-}
-
-=head1 COMMANDS
-
-=over 4
-
-=item B<upload> FILES
-
-upload file to Google Docs
-
-=item B<list> [STRING]
-
-list docs filtering by STRING (can be empty)
-
-=item B<download> FILE
-
-download a document
-
-=item B<trash> FILE
-
-move a document to the trash
-
-=item B<help>
-
-show an help message
-
-=back
-
-=head1 OPTIONS
-
-=over 4
-
-=item B<--email>, B<-e> EMAIL
-
-set login email
-
-=item B<--pwd>, B<-p> PASSWORD
-
-set login password
-
-=item B<--format>, B<-f> FORMAT
-
-set download format (to be used with command 'download')
-
-=item B<--dest>, B<-d> FILE
-
-set download destination (to be used with command 'download')
-
-=back
+App::Google::Docs -> run;
 
 =head1 CONFIGURATION
 
@@ -203,7 +43,7 @@ Specifies the login password.
 
 =head1 AUTHOR
 
-Alessandro Ghedini, C<< <alexbio at cpan.org> >>
+Alessandro Ghedini <alexbio@cpan.org>
 
 =head1 LICENSE AND COPYRIGHT
 

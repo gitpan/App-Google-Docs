@@ -8,8 +8,12 @@ README
 bin/gdocs
 dist.ini
 lib/App/Google/Docs.pm
+lib/App/Google/Docs/Command.pm
+lib/App/Google/Docs/Command/download.pm
+lib/App/Google/Docs/Command/list.pm
+lib/App/Google/Docs/Command/trash.pm
+lib/App/Google/Docs/Command/upload.pm
 t/00-load.t
 t/boilerplate.t
 t/manifest.t
-t/pod-coverage.t
 t/pod.t
