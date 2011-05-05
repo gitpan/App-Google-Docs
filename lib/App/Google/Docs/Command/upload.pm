@@ -1,6 +1,6 @@
 package App::Google::Docs::Command::upload;
 BEGIN {
-  $App::Google::Docs::Command::upload::VERSION = '0.06';
+  $App::Google::Docs::Command::upload::VERSION = '0.07';
 }
 
 use App::Google::Docs -command;
@@ -14,7 +14,7 @@ App::Google::Docs::Command::upload - Upload a bunch of files
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -70,6 +70,16 @@ sub do_upload {
 
 	return { 'title' => $title, 'link' => $link };
 }
+
+=head1 OPTIONS
+
+=head2 --email, -e
+
+Set login email
+
+=head2 --pwd, -p
+
+Set login password
 
 =head1 AUTHOR
 

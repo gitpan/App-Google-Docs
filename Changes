@@ -2,6 +2,36 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit c4fc9302db191f6aaaa09143d8dae78ca886c5a0
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu May 5 18:47:59 2011 +0200
+  
+    bump version
+
+  commit 5abdd80b313e06c79d50035a76e287afdfd9a0f7
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu May 5 18:45:28 2011 +0200
+  
+    remove unused dest option from 'list' command
+
+  commit 180b0020233385426caf4d5ad4b44298ac7c9880
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu May 5 18:40:46 2011 +0200
+  
+    add commands options doc
+
+    lol
+
+  commit 4aaf2aa8987f257e3cb577b2267a5e0e6eeabfe0
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Wed May 4 22:56:33 2011 +0200
+  
+    fix Command docs 
+
+===============================
+2011-05-04 17:06:50 +0200 v0.06
+===============================
+
   commit 4d5d732557f3e64aa08b09a23533f32ed31697f9
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Wed May 4 16:58:54 2011 +0200

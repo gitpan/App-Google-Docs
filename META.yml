@@ -25,7 +25,7 @@ resources:
   bugtracker: https://github.com/AlexBio/App-Google-Docs/issues
   homepage: http://search.cpan.org/dist/App-Google-Docs/
   repository: git://github.com/AlexBio/App-Google-Docs.git
-version: 0.06
+version: 0.07
 x_Dist_Zilla:
   plugins:
     -

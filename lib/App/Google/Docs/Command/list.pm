@@ -1,6 +1,6 @@
 package App::Google::Docs::Command::list;
 BEGIN {
-  $App::Google::Docs::Command::list::VERSION = '0.06';
+  $App::Google::Docs::Command::list::VERSION = '0.07';
 }
 
 use App::Google::Docs -command;
@@ -11,7 +11,7 @@ App::Google::Docs::Command::list - List your docs
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -28,12 +28,6 @@ sub usage_desc {
 	return '%c list %o [ name ]';
 }
 
-sub opt_spec {
-	return (
-		[ "dest", "list only destination dir", ]
-	);
-}
-
 sub execute {
 	my ($self, $opt, $args) = @_;
 
@@ -44,6 +38,16 @@ sub execute {
 		print $_ -> {'title'}, "\n";
 	}
 }
+
+=head1 OPTIONS
+
+=head2 --email, -e
+
+Set login email
+
+=head2 --pwd, -p
+
+Set login password
 
 =head1 AUTHOR
 

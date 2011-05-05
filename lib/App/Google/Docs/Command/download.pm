@@ -1,6 +1,6 @@
 package App::Google::Docs::Command::download;
 BEGIN {
-  $App::Google::Docs::Command::download::VERSION = '0.06';
+  $App::Google::Docs::Command::download::VERSION = '0.07';
 }
 
 use App::Google::Docs -command;
@@ -13,7 +13,7 @@ App::Google::Docs::Command::download - Download a document
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -70,6 +70,24 @@ sub do_download {
 	print $file $response -> {'body'};
 	close $file;
 }
+
+=head1 OPTIONS
+
+=head2 --email, -e
+
+Set login email
+
+=head2 --pwd, -p
+
+Set login password
+
+=head2 --format, -f
+
+Set download format (default C<txt>).
+
+=head2 --dest, -d
+
+Set download destination directory (default C<.>).
 
 =head1 AUTHOR
 

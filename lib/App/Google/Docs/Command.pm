@@ -1,6 +1,6 @@
 package App::Google::Docs::Command;
 BEGIN {
-  $App::Google::Docs::Command::VERSION = '0.06';
+  $App::Google::Docs::Command::VERSION = '0.07';
 }
 
 use App::Cmd::Setup -command;
@@ -18,11 +18,13 @@ App::Google::Docs::Command - Base class for App::Google::Docs commands
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 METHODS
 
 =head2 get_docs( $name )
+
+Get a list of documents matching C<$name>.
 
 =cut
 
@@ -85,8 +87,6 @@ sub auth {
 
 	return $tokens -> {'auth_token'};
 }
-
-=head1 METHODS
 
 =head2 do_request( $request )
 
