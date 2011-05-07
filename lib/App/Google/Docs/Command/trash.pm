@@ -1,9 +1,12 @@
 package App::Google::Docs::Command::trash;
 BEGIN {
-  $App::Google::Docs::Command::trash::VERSION = '0.07';
+  $App::Google::Docs::Command::trash::VERSION = '0.08';
 }
 
 use App::Google::Docs -command;
+
+use warnings;
+use strict;
 
 =head1 NAME
 
@@ -11,7 +14,7 @@ App::Google::Docs::Command::trash - Move a document to the trash
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 

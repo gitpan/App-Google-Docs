@@ -1,6 +1,6 @@
 package App::Google::Docs::Command::upload;
 BEGIN {
-  $App::Google::Docs::Command::upload::VERSION = '0.07';
+  $App::Google::Docs::Command::upload::VERSION = '0.08';
 }
 
 use App::Google::Docs -command;
@@ -8,13 +8,16 @@ use App::Google::Docs -command;
 use File::Basename;
 use LWP::MediaTypes;
 
+use warnings;
+use strict;
+
 =head1 NAME
 
 App::Google::Docs::Command::upload - Upload a bunch of files
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 

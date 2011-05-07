@@ -1,6 +1,6 @@
 package App::Google::Docs;
 BEGIN {
-  $App::Google::Docs::VERSION = '0.07';
+  $App::Google::Docs::VERSION = '0.08';
 }
 
 use App::Cmd::Setup -app;
@@ -18,7 +18,7 @@ App::Google::Docs - Bring Google Documents to the command line
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 

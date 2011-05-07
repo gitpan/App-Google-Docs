@@ -1,6 +1,6 @@
 package App::Google::Docs::Command;
 BEGIN {
-  $App::Google::Docs::Command::VERSION = '0.07';
+  $App::Google::Docs::Command::VERSION = '0.08';
 }
 
 use App::Cmd::Setup -command;
@@ -18,7 +18,7 @@ App::Google::Docs::Command - Base class for App::Google::Docs commands
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 METHODS
 
@@ -34,6 +34,8 @@ sub get_docs {
 	my $url     = "https://docs.google.com/feeds/documents/private/full?alt=json";
 	my $request = HTTP::Request -> new(GET => $url);
 	my $jdocs   = decode_json $self -> do_request($request, $auth) -> {'body'};
+
+	$grep = defined $grep ? $grep : "";
 
 	my @docs = ();
 

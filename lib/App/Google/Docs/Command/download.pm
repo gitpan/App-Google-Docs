@@ -1,11 +1,14 @@
 package App::Google::Docs::Command::download;
 BEGIN {
-  $App::Google::Docs::Command::download::VERSION = '0.07';
+  $App::Google::Docs::Command::download::VERSION = '0.08';
 }
 
 use App::Google::Docs -command;
 
 use Cwd;
+
+use warnings;
+use strict;
 
 =head1 NAME
 
@@ -13,7 +16,7 @@ App::Google::Docs::Command::download - Download a document
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -66,7 +69,7 @@ sub do_download {
 
 	my $out_file = "$dest/".$doc -> {'title'}.".$format";
 
-	open $file, ">", $out_file or die "Err: unable to open '$out_file': $!.\n";
+	open my $file, ">", $out_file or die "Err: unable to open '$out_file': $!.\n";
 	print $file $response -> {'body'};
 	close $file;
 }

@@ -48,7 +48,7 @@
          "web" : "https://github.com/AlexBio/App-Google-Docs"
       }
    },
-   "version" : "0.07",
+   "version" : "0.08",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -124,12 +124,12 @@
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Meta",
             "name" : "@Author::ALEXBIO/@GitHub/GitHub::Meta",
-            "version" : "0.07"
+            "version" : "0.08"
          },
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Update",
             "name" : "@Author::ALEXBIO/@GitHub/GitHub::Update",
-            "version" : "0.07"
+            "version" : "0.08"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
