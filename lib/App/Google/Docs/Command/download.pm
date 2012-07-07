@@ -1,6 +1,6 @@
 package App::Google::Docs::Command::download;
-BEGIN {
-  $App::Google::Docs::Command::download::VERSION = '0.08';
+{
+  $App::Google::Docs::Command::download::VERSION = '0.09';
 }
 
 use App::Google::Docs -command;
@@ -16,7 +16,7 @@ App::Google::Docs::Command::download - Download a document
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

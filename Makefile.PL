@@ -9,32 +9,36 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Bring Google Documents to the command line',
-  'AUTHOR' => 'Alessandro Ghedini <alexbio@cpan.org>',
-  'BUILD_REQUIRES' => {
-    'Test::More' => '0'
+  "ABSTRACT" => "Bring Google Documents to the command line",
+  "AUTHOR" => "Alessandro Ghedini <alexbio\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "File::Find" => 0,
+    "File::Temp" => 0,
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'App-Google-Docs',
-  'EXE_FILES' => [
-    'bin/gdocs'
+  "DISTNAME" => "App-Google-Docs",
+  "EXE_FILES" => [
+    "bin/gdocs"
   ],
-  'LICENSE' => 'perl',
-  'NAME' => 'App::Google::Docs',
-  'PREREQ_PM' => {
-    'App::Cmd::Setup' => '0',
-    'Cwd' => '0',
-    'File::Basename' => '0',
-    'JSON' => '0',
-    'LWP::MediaTypes' => '0',
-    'LWP::UserAgent' => '0',
-    'WWW::Google::Auth::ClientLogin' => '0'
+  "LICENSE" => "perl",
+  "NAME" => "App::Google::Docs",
+  "PREREQ_PM" => {
+    "App::Cmd::Setup" => 0,
+    "Cwd" => 0,
+    "File::Basename" => 0,
+    "JSON" => 0,
+    "LWP::MediaTypes" => 0,
+    "LWP::UserAgent" => 0,
+    "WWW::Google::Auth::ClientLogin" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.08',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.09",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

@@ -1,6 +1,6 @@
 package App::Google::Docs::Command::trash;
-BEGIN {
-  $App::Google::Docs::Command::trash::VERSION = '0.08';
+{
+  $App::Google::Docs::Command::trash::VERSION = '0.09';
 }
 
 use App::Google::Docs -command;
@@ -14,7 +14,7 @@ App::Google::Docs::Command::trash - Move a document to the trash
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

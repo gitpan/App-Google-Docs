@@ -1,6 +1,6 @@
 package App::Google::Docs::Command;
-BEGIN {
-  $App::Google::Docs::Command::VERSION = '0.08';
+{
+  $App::Google::Docs::Command::VERSION = '0.09';
 }
 
 use App::Cmd::Setup -command;
@@ -18,7 +18,7 @@ App::Google::Docs::Command - Base class for App::Google::Docs commands
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 METHODS
 

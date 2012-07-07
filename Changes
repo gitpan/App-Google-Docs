@@ -1,237 +1,29 @@
-==============================
-9999-99-99 99:99:99 +0000 HEAD
-==============================
+==================================================
+Changes from 2011-07-08 00:00:00 +0000 to present.
+==================================================
 
-  commit f234779514b9dcc3cd51106009cc037d2317ba4b
+-----------------------------------------
+version 0.09 at 2012-07-07 12:13:38 +0000
+-----------------------------------------
+
+  Change: f0365d13e7a90c6ba5d66f817de0884b37f152a5
   Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat May 7 13:17:42 2011 +0200
-  
-    bump version
+  Date : 2012-07-07 14:13:14 +0000
 
-  commit 4e1d4b9103524b76daebb2b3ec59726b2c25b387
+    dist.ini: don't run podcoverage tests 
+
+  Change: 9d3c720b7f2ad6f48fc67b96d10a98de6decab91
   Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat May 7 13:16:35 2011 +0200
-  
-    fix some errors
+  Date : 2012-07-07 14:11:06 +0000
 
-  commit aa91aa462b68c860d44c548dc77d363d4fadf6f5
+    dist.ini: use Git::NextVersion plugin 
+
+  Change: 5ed5bf9b3a8b01719a706f46ab6640840f5efefd
   Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat May 7 13:13:11 2011 +0200
-  
-    use strict and warnings 
+  Date : 2012-07-07 14:08:11 +0000
 
-===============================
-2011-05-05 18:47:59 +0200 v0.07
-===============================
+    dist.ini: update repo name 
 
-  commit c4fc9302db191f6aaaa09143d8dae78ca886c5a0
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu May 5 18:47:59 2011 +0200
-  
-    bump version
-
-  commit 5abdd80b313e06c79d50035a76e287afdfd9a0f7
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu May 5 18:45:28 2011 +0200
-  
-    remove unused dest option from 'list' command
-
-  commit 180b0020233385426caf4d5ad4b44298ac7c9880
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu May 5 18:40:46 2011 +0200
-  
-    add commands options doc
-
-    lol
-
-  commit 4aaf2aa8987f257e3cb577b2267a5e0e6eeabfe0
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Wed May 4 22:56:33 2011 +0200
-  
-    fix Command docs 
-
-===============================
-2011-05-04 17:06:50 +0200 v0.06
-===============================
-
-  commit 4d5d732557f3e64aa08b09a23533f32ed31697f9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Wed May 4 16:58:54 2011 +0200
-  
-    bump version
-
-  commit 4005c6d5f99a6ac20f3c6d2c41081b81b876632b
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Wed May 4 17:06:40 2011 +0200
-  
-    autoflush STDOUT, to keep output formatted on error
-
-  commit 4cfad34ca62fc4e54dc2a52dcabfc81d3da4a329
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Wed May 4 16:47:11 2011 +0200
-  
-    clean-up code
-
-  commit 5023ac6aca28f3cc2f8235eb432e6f4fac97dbb4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Wed May 4 16:05:45 2011 +0200
-  
-    use App::Cmd
-
-  commit cce2d1d0fa36214bf271d701eba81cd071f564a9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Apr 25 18:51:40 2011 +0200
-  
-    use Author::ALEXBIO dzil bundle
-
-  commit d66593bc14d313e5ad8d8fe196b56367ba244cad
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 19:41:45 2011 +0100
-  
-    fix email address 
-
-===============================
-2011-03-17 16:35:34 +0100 v0.05
-===============================
-
-  commit f0eaf33036ad887565110c2ab29be9ed8a44262b
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 16:23:32 2011 +0100
-  
-    bump version
-
-  commit 96fba9d51dc1179d6f713ee49310f6997ed4bd8d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 16:35:18 2011 +0100
-  
-    use LWP::MediaTypes
-
-  commit 99139703200fa195bedb782ca6074068eb6a21f7
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 16:20:27 2011 +0100
-  
-    purge cruft from docs
-
-  commit 62f89565f44fdfce4d2b6b40c869b08fd59983d9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 16:19:36 2011 +0100
-  
-    use @GitHub plugin bundle
-
-  commit 870f94dcae86cc85c7c863dab8dfe9b02141956c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 19:41:42 2011 +0100
-  
-    fix package version in user-agent 
-
-===============================
-2011-02-25 17:33:50 +0100 v0.04
-===============================
-
-  commit 5b4b3049312b14e373de22048af17c76277eed4f
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 17:18:09 2011 +0100
-  
-    bump version
-
-  commit a6acb97414dcf92c5335a7e555748c81acd88306
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 17:32:56 2011 +0100
-  
-    use package's current version
-
-  commit 7e853efd88c48269aa3f8db4de96e7d204e38f0b
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 17:17:53 2011 +0100
-  
-    add GithubUpdate to dist.ini
-
-  commit 7fd90475b5f121cdd5b632c8dc6a6af8d03b489e
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 17:15:44 2011 +0100
-  
-    explicitly set Google account type
-
-  commit 123789f0e0edd07bf2a92e978d8ffbb352b4874f
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 17:10:25 2011 +0100
-  
-    fix typo in documentation
-
-  commit b103e905182b72c8663e3129e56ec842c40d9194
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Fri Feb 25 16:40:24 2011 +0100
-  
-    check for empty command 
-
-===============================
-2011-01-08 15:54:20 +0100 v0.03
-===============================
-
-  commit a199b8e5851184a04867d6e64b6999481372f15f
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 15:54:20 2011 +0100
-  
-    bump version
-
-  commit e80b745ffb22287d6a31e93d26a39b85f7a8893a
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 15:53:45 2011 +0100
-  
-    remove ACKNOWLEDGEMENTS section
-
-  commit 443afb415fe5c746963c37eec7aed65dde056164
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 15:52:41 2011 +0100
-  
-    remove SEE ALSO section
-
-  commit da42a17f6294ed29fb0c227dca9aac7e71421ae3
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 15:51:26 2011 +0100
-  
-    short description start with capital letter
-
-  commit d3000bc2122e5496bd6f276de5e20bb6d1eedc11
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 15:50:50 2011 +0100
-  
-    use lexical filehandle in gdocs
-
-  commit a13860d2867ba9e1719a30956d5022475338fa1a
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 15:48:31 2011 +0100
-  
-    make gdocs executable 
-
-===============================
-2011-01-08 11:53:37 +0100 v0.02
-===============================
-
-  commit 53ee04defe3c6b2915bcd11ace420e8d293e5da6
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 11:53:37 2011 +0100
-  
-    bump version
-
-  commit 03175d4bb701d153007004191ad84ddf9ac40e29
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Jan 8 11:36:57 2011 +0100
-  
-    add 'help' command
-
-  commit cf66bbb2bd212cd07cd5bcdbfbcdba9c1e3c164e
-  Author: Alexandr Ciornii <alexchorny@gmail.com>
-  Date:   Fri Jan 7 22:31:42 2011 +0200
-  
-    correct name for environment variable
-
-  commit e21b1c1c4fc21478f18d57367c3bfba94ae7f456
-  Author: Alexandr Ciornii <alexchorny@gmail.com>
-  Date:   Fri Jan 7 22:30:05 2011 +0200
-  
-    use lexical filehandle 
-
-===================================
-End of changes in the last 365 days
-===================================
+================================================
+Plus 8 releases after 2011-07-08 00:00:00 +0000.
+================================================
